@@ -1,0 +1,117 @@
+$text-color: #222;
+$help-color: #999;
+$disable-color: #ccc;
+$font-size-base: 14px;
+$link-color: #2db7f5;
+$link-hover-color: #4DC4F0;
+$font-family:  "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+
+.nav-head i{
+    color: #666;
+}
+
+body{
+    color: $text-color;
+    font-family: $font-family;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,menu,nav,section {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol{
+    list-style: none;
+}
+a{
+    color: $link-color;
+    text-decoration: none;
+    transition: color .3s ease;
+    cursor: pointer;
+    &:hover{
+        color: $link-hover-color
+    }
+}
+h1{
+    font-size: 16px
+}
+h2{
+    font-size: 14px;
+}
+h3{
+    font-size: $font-size-base
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.hide {
+  display: none !important;
+}
+
+.row{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin:15px auto;
+    &:after{
+        content: " ";
+        display: block;
+        clear:both;
+    }
+}
+
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12{
+    position: relative;
+    display: block;
+    float: left;
+    box-sizing:border-box;
+    padding-right:10px;
+
+}
+
+.col-label{
+    text-align:right;
+    height:32px;
+    line-height:32px;
+}
+.col-label-middle{
+    text-align:right;
+    height:28px;
+    line-height:28px;
+}
+
+.col-unit{
+    text-align:left;
+    height:32px;
+    line-height:32px;
+}
+.col-unit-middle{
+    text-align:left;
+    height:28px;
+    line-height:28px;
+}
+
+
+$allwidth: 100%;
+
+@for $i from 1 through 12{
+    .col-#{$i} {
+        width: #{$i * $allwidth/12}
+    }
+    .col-offset-#{$i}{
+        margin-left: #{$i * $allwidth/12}
+    }
+}
+.full{
+    float: left;
+    margin: 5px;
+    margin-left: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}

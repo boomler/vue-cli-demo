@@ -1,0 +1,14 @@
+.DS_Store
+.idea/
+node_modules/
+server/node_modules/
+npm-debug.log
+selenium-debug.log
+test/unit/coverage
+test/e2e/reports
+static/
+view/
+components/
+config/
+build/
+dist/uploads/
